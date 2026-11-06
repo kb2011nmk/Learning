@@ -1,2 +1,8 @@
-name = input("Hello, what's your name?")
-print (f"Hello {name}")
+running = True
+
+def encryption(message):
+    print (message)
+
+while running:
+    message = input(">> ")
+    encryption(message)
