@@ -2,7 +2,7 @@ running = True
 
 def text_to_decimal(message):
     for i in range (len(message)):
-        print(decimal_to_binary(ord(message[i])), end = "")
+        return(decimal_to_binary(ord(message[i])), end = "")
 
 def decimal_to_binary(message):
     n = int(message)  # decimal number
@@ -18,4 +18,4 @@ def encryption(message):
 
 while running:
     message = input(">> ")
-    text_to_decimal(message)
+    print(text_to_decimal(message))
