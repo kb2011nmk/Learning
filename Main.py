@@ -1,16 +1,22 @@
 running = True
 
 def text_to_decimal(message):
-    for i in range (len(message)):
-        return(decimal_to_binary(ord(message[i])), end = "")
+    a = ""
+
+    for i in range (len(message)):  
+        a = a + str(decimal_to_binary(ord(message[i]))) 
+
+    return a
 
 def decimal_to_binary(message):
+
     n = int(message)  # decimal number
     res = ''  # binary result
 
     for i in range (8):
         res = str(n % 2) + res
         n //= 2
+
     return(res)
 
 def encryption(message):
@@ -18,4 +24,4 @@ def encryption(message):
 
 while running:
     message = input(">> ")
-    print(text_to_decimal(message))
+    print(encryption(text_to_decimal(message)))
